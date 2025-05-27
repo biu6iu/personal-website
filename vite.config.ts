@@ -10,12 +10,12 @@ export default defineConfig({
       input: {
         main: 'src/index.html',
         collections: 'src/pages/collections.html',
-        sydney: 'src/pages/sydney_collection.html',
-        chinaTrip1: 'src/pages/china_trip_1.html',
-        chinaTrip2: 'src/pages/china_trip_2.html',
-        fitzroy: 'src/pages/fitzroy_collection.html',
-        raglan: 'src/pages/raglan_collection.html',
-        archive: 'src/pages/archive_collection.html'
+        sydney: 'src/pages/collections/sydney_collection.html',
+        chinaTrip1: 'src/pages/collections/china_trip_1.html',
+        chinaTrip2: 'src/pages/collections/china_trip_2.html',
+        fitzroy: 'src/pages/collections/fitzroy_collection.html',
+        raglan: 'src/pages/collections/raglan_collection.html',
+        archive: 'src/pages/collections/archive_collection.html'
       }
     }
   },
