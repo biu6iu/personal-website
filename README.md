@@ -1,9 +1,11 @@
-# Photography Portfolio
+# Steven's Personal Portfolio
 
-My photography portfolio built with TypeScript and Vite. However, I'm looking to transfer this into more of a personal portfolio. 
+Welcome to my personal portfolio! It includes an about page that details my education, skills and experience, a project page that showcases the projects I've worked on, and a contacts page to reach me. I also have a photography page that displays some photos I've taken.
 
+## Tech Stack
+This project was originally built on purely HTML/CSS, and now I'm in the middle of transitioning it into TypeScript for better functionality. I'm also planning to implement a NoSQL database in order to store the photos, which will most likely be MongoDB. 
 
-## Collections
+## Photography Collections
 
 - Sydney, Australia
 - ChongQing, ShenZhen, and HongKong
