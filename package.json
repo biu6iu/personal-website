@@ -1,0 +1,29 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "My personal website. Built with HTML and CSS. Took about 2 days lol",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biu6iu/stevenlu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/biu6iu/stevenlu/issues"
+  },
+  "homepage": "https://github.com/biu6iu/stevenlu#readme",
+  "devDependencies": {
+    "@types/dom-navigation": "^1.0.5",
+    "@types/dom-view-transitions": "^1.0.6",
+    "@types/node": "^20.11.30",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.6"
+  }
+}
