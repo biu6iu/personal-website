@@ -1,7 +1,7 @@
 {
-  "name": "website",
+  "name": "photography-portfolio",
   "version": "1.0.0",
-  "description": "My personal website. Built with HTML and CSS. Took about 2 days lol",
+  "description": "Photography portfolio website built with TypeScript and Vite",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -11,9 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/biu6iu/stevenlu.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "photography",
+    "portfolio",
+    "typescript",
+    "vite"
+  ],
+  "author": "Steven Lu",
+  "license": "CC0-1.0",
   "bugs": {
     "url": "https://github.com/biu6iu/stevenlu/issues"
   },
