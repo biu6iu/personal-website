@@ -4,7 +4,7 @@
   "description": "Photography portfolio website built with TypeScript and Vite",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && cp -r src/assets/photos dist/assets/",
     "preview": "vite preview"
   },
   "repository": {
