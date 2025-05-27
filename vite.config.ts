@@ -14,7 +14,7 @@ export default defineConfig({
         photography: 'src/pages/photography.html',
         about: 'src/pages/about.html',
         contact: 'src/pages/contact.html',
-        other: 'src/pages/other.html',
+        projects: 'src/pages/projects.html',
         sydney: 'src/pages/collections/sydney_collection.html',
         chinaTrip1: 'src/pages/collections/china_trip_1.html',
         chinaTrip2: 'src/pages/collections/china_trip_2.html',
