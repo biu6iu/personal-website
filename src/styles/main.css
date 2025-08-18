@@ -312,6 +312,7 @@ p a:hover {
     color: #666;
     font-size: 0.9rem;
     grid-column: 1;
+    align-items: start;
 }
 
 .education-info {
@@ -389,6 +390,19 @@ main:has(#projects) {
     padding: 2rem;
 }
 
+.project-item {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+.project-info {
+    grid-column: 2;
+}
+
+
 /* Maintain existing about page styles */
 main:has(#about-content) {
     display: block;
@@ -399,6 +413,15 @@ main:has(#about-content) {
     #projects {
         padding: 1rem;
         width: 90%;
+    }
+
+    .project-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .project-info {
+        grid-column: 1;
     }
 }
 
