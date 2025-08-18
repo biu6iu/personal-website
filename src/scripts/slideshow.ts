@@ -66,12 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
     new Slideshow({
         containerId: 'photo-slideshow',
         images: [
-            '/assets/photos/old_film/34010031.JPG',
-            '/assets/photos/syd_24\'/DSCF4607.JPG',
-            '/assets/photos/china_trip_2/DSCF4174.JPG',
-            '/assets/photos/fitzroy/DSCF3610.JPG',
-            '/assets/photos/china_trip_1/DSCF3324.JPG',
-            '/assets/photos/raglan/DSCF3039.JPG'
+            'https://res.cloudinary.com/dmajxoe5p/image/upload/v1755497161/34010031_w3wi5v.jpg',
+            'https://res.cloudinary.com/dmajxoe5p/image/upload/v1755496896/DSCF4607_Resize_Image_e8fx7x.jpg',
+            'https://res.cloudinary.com/dmajxoe5p/image/upload/v1755494383/Resize_Image_10MB_4_vwl6rs.jpg',
+            'https://res.cloudinary.com/dmajxoe5p/image/upload/v1755494951/DSCF3610_Resize_Image_sgx176.jpg',
+            'https://res.cloudinary.com/dmajxoe5p/image/upload/v1755492968/DSCF3324_Resized_Image_gkbbqd.jpg',
+            'https://res.cloudinary.com/dmajxoe5p/image/upload/v1755496375/DSCF3039_Resize_Image_kxclga.jpg'
         ],
         interval: 2500 // 2.5 seconds
     });
