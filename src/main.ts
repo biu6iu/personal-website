@@ -52,5 +52,5 @@ function initialiseSite(): void {
   console.log('Site initialised');
 }
 
-// Initialize when the DOM is loaded
+// Initialise when the DOM is loaded
 document.addEventListener('DOMContentLoaded', initialiseSite); 
