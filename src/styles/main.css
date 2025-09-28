@@ -305,19 +305,19 @@ p a:hover {
     display: grid;
     grid-template-columns: 150px 1fr;
     gap: 1rem;
-    align-items: start;
+    align-items: baseline;
 }
 
 .date {
     color: #666;
     font-size: 0.9rem;
     grid-column: 1;
-    align-items: start;
 }
 
 .education-info {
     grid-column: 2;
 }
+
 
 .skills-grid {
     display: grid;
@@ -395,7 +395,7 @@ main:has(#projects) {
     display: grid;
     grid-template-columns: 150px 1fr;
     gap: 1rem;
-    align-items: start;
+    align-items: baseline;
 }
 
 .project-info {
