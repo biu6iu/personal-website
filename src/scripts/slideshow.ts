@@ -61,7 +61,6 @@ class Slideshow {
     }
 }
 
-// Initialize the slideshow when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new Slideshow({
         containerId: 'photo-slideshow',
@@ -73,6 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
             'https://res.cloudinary.com/dmajxoe5p/image/upload/v1755492968/DSCF3324_Resized_Image_gkbbqd.jpg',
             'https://res.cloudinary.com/dmajxoe5p/image/upload/v1755496375/DSCF3039_Resize_Image_kxclga.jpg'
         ],
-        interval: 2500 // 2.5 seconds
+        interval: 2500 
     });
 }); 

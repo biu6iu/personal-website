@@ -5,7 +5,7 @@ body {
     color: #000000;
     background-color: #f8f8f8;
     display: flex;
-    height: 100vh; /* Full height of the viewport */
+    height: 100vh; 
 }
 
 .container {
@@ -17,13 +17,13 @@ body {
 
 .sidebar {
     padding: 25px;
-    width: 20%; /* Sidebar takes up 20% of the page width */
+    width: 20%;
     height: 95%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box; /* Include padding/border in dimensions */
+    box-sizing: border-box; 
     position: sticky;
     overflow: hidden;
 }
@@ -41,10 +41,10 @@ h1 {
 }
 
 .nav-links {
-    flex: 1; /* Allow links to take up the middle space */
+    flex: 1; 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center links vertically */
+    justify-content: center; 
     align-items: center;
 }
 
@@ -100,12 +100,10 @@ main {
     padding: 20px;
 }
 
-/* Make main content centered by default (for About, Contact, Other pages) */
 main:not(:has(.photo)) {
     justify-content: center;
 }
 
-/* Specific styles for collections page main content */
 main:has(#collections) {
     justify-content: flex-start;
     align-items: flex-start;
@@ -116,7 +114,7 @@ main:has(#collections) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Center the text inside the section */
+    text-align: center;
     max-width: 80%;
 }
 
@@ -134,26 +132,25 @@ p a:hover {
     color:#000000;
 }
 
-/* Flexbox layout for the collections section */
+
 #collections {
     display: flex;
-    flex-wrap: wrap;  /* Allow items to wrap to the next line */
-    justify-content: left;  /* Distribute buttons evenly */
-    gap: 20px;  /* Space between images */
-    width: 100%;  /* Take up full width of main */
-    padding-bottom: 20px; /* Add some padding at the bottom */
+    flex-wrap: wrap;  
+    justify-content: left;  
+    gap: 20px; 
+    width: 100%;
+    padding-bottom: 20px;
 }
 
-/* Style for each button */
+
 #collections button {
-    border: none;  /* Remove default button border */
-    background-color: transparent;  /* Transparent background */
-    padding: 0;  /* Remove padding */
-    cursor: pointer;  /* Pointer cursor on hover */
+    border: none;  
+    background-color: transparent; 
+    padding: 0; 
+    cursor: pointer; 
     transition: 0.3s ease;
 }
 
-/* Collection title styles */
 .collection-title {
     font-family: "Garamond", serif;
     font-size: 28px;
@@ -164,21 +161,21 @@ p a:hover {
     width: 100%;
 }
 
-/* Style for images inside collection buttons */
+
 #collections button img {
-    width: 100%;  /* Ensure the image takes up the full width of its container */
-    height: auto;  /* Maintain the image's aspect ratio */
-    max-width: 525px;  /* Maximum width for each image */
-    max-height: 525px;  /* Maximum height for each image */
-    object-fit: cover;  /* Crop the image if it exceeds the dimensions */
+    width: 100%; 
+    height: auto;  
+    max-width: 525px;  
+    max-height: 525px;  
+    object-fit: cover;  
 }
 
-/* Update collections button hover */
+
 #collections button:hover {
     transform: scale(0.97);
 }
 
-/* Slideshow styles */
+
 .slideshow {
     position: relative;
     width: 100%;
@@ -202,7 +199,7 @@ p a:hover {
     opacity: 1;
 }
 
-/* Media query for mobile devices */
+
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -234,7 +231,7 @@ p a:hover {
         flex: 1;
     }
 
-    /* Adjust collection grid for mobile */
+
     #collections {
         justify-content: center;
     }
@@ -243,12 +240,12 @@ p a:hover {
         max-width: 100%;
     }
 
-    /* Adjust photo display for mobile */
+
     .photo img {
         max-width: 100%;
     }
 
-    /* Adjust title sizes for mobile */
+ 
     .collection-title {
         font-size: 24px;
         padding: 15px 0 30px 0;
@@ -259,7 +256,7 @@ p a:hover {
     }
 }
 
-/* Media query for very small devices */
+
 @media screen and (max-width: 480px) {
     .nav-links ul {
         gap: 10px;
@@ -276,7 +273,7 @@ p a:hover {
     }
 }
 
-/* About page styles */
+
 #about-content {
     max-width: 800px;
     margin: 0 auto;
@@ -335,7 +332,7 @@ p a:hover {
     line-height: 1.6;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .skills-grid {
         grid-template-columns: 1fr;
@@ -351,7 +348,7 @@ p a:hover {
     }
 }
 
-/* Section link styles */
+
 .section-link {
     color: #000;
     text-decoration: none;
@@ -366,7 +363,7 @@ p a:hover {
     color: #666;
 }
 
-/* Arrow styling */
+
 .arrow {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     display: inline-block;
@@ -374,7 +371,7 @@ p a:hover {
     font-weight: normal;
 }
 
-/* Center content for contact and projects pages */
+
 main:has(#contact), 
 main:has(#projects) {
     display: flex;
@@ -403,7 +400,7 @@ main:has(#projects) {
 }
 
 
-/* Maintain existing about page styles */
+
 main:has(#about-content) {
     display: block;
 }
