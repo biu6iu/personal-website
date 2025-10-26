@@ -1,4 +1,3 @@
-// Types for our collections
 interface Collection {
   name: string;
   path: string;
@@ -45,12 +44,3 @@ const collections: Collection[] = [
     title: 'Archives'
   }
 ];
-
-// Function to initialise the site
-function initialiseSite(): void {
-  // Add any site-wide functionality here
-  console.log('Site initialised');
-}
-
-// Initialise when the DOM is loaded
-document.addEventListener('DOMContentLoaded', initialiseSite); 
