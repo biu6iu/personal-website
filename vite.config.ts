@@ -1,9 +1,11 @@
 import { defineConfig } from 'vite';
+import { htmlIncludes } from './src/partials/htmlIncludes';
 
 export default defineConfig({
   root: 'src',
   publicDir: '../public',
   base: '/biu-biu/',
+  plugins: [htmlIncludes()],
   build: {
     outDir: '../dist',
     emptyOutDir: true,

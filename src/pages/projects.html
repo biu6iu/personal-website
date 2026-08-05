@@ -4,31 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
-    <script>
-        if (localStorage.getItem("theme") === "dark") {
-            document.documentElement.classList.add("dark-mode");
-        }
-    </script>
+    <!--@theme-init-->
     <link rel="stylesheet" href="../styles/main.css">
     <script type="module" src="../main.ts"></script>
     <script type="module" src="../scripts/darkMode.ts"></script>
 </head>
 <body>
     <div class="container">
-        <nav class="sidebar">
-            <h1 style="margin-top:20px;">
-                <a href="../index.html">STEVEN LU</a>
-            </h1>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="projects.html">PROJECTS</a></li>
-                    <li><a href="photography.html">PHOTOGRAPHY</a></li>
-                    <li><button id="theme-toggle">Light Mode</button></li>
-                </ul>
-            </div>
-        </nav>
+        <!--@nav-->
         <main>
             <section id="about-content">
                 <div class="about-section">
@@ -51,7 +34,7 @@
                             <h3>Naive Bayes Classifier</h3>
                             <p>An end-to-end Naive Bayes classification pipeline</p>
                             <p> • Built a complete ML pipeline for preprocessing, training, prediction, and evaluation</p>
-                             <p> • Everything built from scratch based on the Naive Bayes algorithm</p>
+                            <p> • Everything built from scratch based on the Naive Bayes algorithm</p>
                             <p> • Implemented a hybrid Naive Bayes classifier supporting both categorical features (Laplace smoothing) and continuous features (Gaussian likelihood estimation).</p>
                             <p> • Github repo:
                                 <a href="https://github.com/biu6iu/naive-bayes-classifier" class="section-link">Naive Bayes Classifier<span class="arrow">↗</span></a>
