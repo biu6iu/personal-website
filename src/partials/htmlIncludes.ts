@@ -3,6 +3,8 @@ import { fileURLToPath } from 'node:url';
 import type { Plugin } from 'vite';
 import { renderNav, type NavPaths } from './nav';
 import { THEME_INIT_SCRIPT } from './theme-init';
+import { renderCollectionCards } from './collectionCards';
+import { COLLECTIONS } from '../data/collections';
 
 const srcDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -22,7 +24,8 @@ export function htmlIncludes(): Plugin {
 
       return html
         .replace('<!--@theme-init-->', THEME_INIT_SCRIPT)
-        .replace('<!--@nav-->', renderNav(navPaths));
+        .replace('<!--@nav-->', renderNav(navPaths))
+        .replace('<!--@collection-cards-->', renderCollectionCards(COLLECTIONS));
     },
   };
 }
