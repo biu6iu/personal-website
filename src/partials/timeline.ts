@@ -1,4 +1,4 @@
-import type { TimelineEntry, TimelineLine } from '../data/timeline';
+import type { TimelineEntry, TimelineLine } from '../data/timeline.ts';
 
 function renderLine(line: TimelineLine): string {
   if ('text' in line) {

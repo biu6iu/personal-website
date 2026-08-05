@@ -1,5 +1,6 @@
 {
   "name": "personal-portfolio",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && cp -r src/assets/photos dist/assets/",
