@@ -4,30 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitzroy Collection</title>
-    <script>
-        if (localStorage.getItem("theme") === "dark") {
-            document.documentElement.classList.add("dark-mode");
-        }
-    </script>
+    <!--@theme-init-->
     <link rel="stylesheet" href="../../styles/main.css">
     <script type="module" src="../../scripts/darkMode.ts"></script>
 </head>
 <body>
     <div class="container">
-        <nav class="sidebar">
-            <h1 style="margin-top:20px;">
-                <a href="../../index.html">STEVEN LU</a>
-            </h1>
-            <div class="nav-links">
-                <ul>                    
-                    <li><a href="../about.html">ABOUT</a></li>
-                    <li><a href="../contact.html">CONTACT</a></li>
-                    <li><a href="../projects.html">PROJECTS</a></li>
-                    <li><a href="../../pages/photography.html">PHOTOGRAPHY</a></li>
-                    <li><button id="theme-toggle">LIGHT MODE</button></li>
-                </ul>
-            </div>
-        </nav>
+        <!--@nav-->
         <main>
             <div class="photo">
                 <div class="collection-title">FITZROY, MELB</div>
