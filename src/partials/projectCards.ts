@@ -1,4 +1,4 @@
-import type { Project, ProjectLink } from '../data/projects';
+import type { Project, ProjectLink } from '../data/projects.ts';
 
 function renderLink(link: ProjectLink): string {
   return `                            <p> • ${link.label}

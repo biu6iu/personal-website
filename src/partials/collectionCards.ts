@@ -1,4 +1,4 @@
-import type { Collection } from '../data/collections';
+import type { Collection } from '../data/collections.ts';
 
 export function renderCollectionCards(collections: Collection[]): string {
   return collections

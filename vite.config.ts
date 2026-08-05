@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import { htmlIncludes } from './src/partials/htmlIncludes';
+import { htmlIncludes } from './src/partials/htmlIncludes.ts';
 
 export default defineConfig({
   root: 'src',

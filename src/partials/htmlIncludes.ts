@@ -1,16 +1,16 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { Plugin } from 'vite';
-import { renderNav, type NavPaths } from './nav';
-import { THEME_INIT_SCRIPT } from './theme-init';
-import { renderCollectionCards } from './collectionCards';
-import { COLLECTIONS } from '../data/collections';
-import { renderProjectCards } from './projectCards';
-import { PROJECTS } from '../data/projects';
-import { renderTimelineEntries } from './timeline';
-import { EDUCATION, EXPERIENCE } from '../data/timeline';
-import { renderGallery } from './gallery';
-import { GALLERIES } from '../data/galleries';
+import { renderNav, type NavPaths } from './nav.ts';
+import { THEME_INIT_SCRIPT } from './theme-init.ts';
+import { renderCollectionCards } from './collectionCards.ts';
+import { COLLECTIONS } from '../data/collections.ts';
+import { renderProjectCards } from './projectCards.ts';
+import { PROJECTS } from '../data/projects.ts';
+import { renderTimelineEntries } from './timeline.ts';
+import { EDUCATION, EXPERIENCE } from '../data/timeline.ts';
+import { renderGallery } from './gallery.ts';
+import { GALLERIES } from '../data/galleries.ts';
 
 const srcDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 

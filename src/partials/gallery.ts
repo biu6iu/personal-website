@@ -1,4 +1,4 @@
-import type { Gallery } from '../data/galleries';
+import type { Gallery } from '../data/galleries.ts';
 
 export function renderGallery(gallery: Gallery): string {
   const images = gallery.images
