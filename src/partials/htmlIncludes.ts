@@ -7,6 +7,8 @@ import { renderCollectionCards } from './collectionCards';
 import { COLLECTIONS } from '../data/collections';
 import { renderProjectCards } from './projectCards';
 import { PROJECTS } from '../data/projects';
+import { renderTimelineEntries } from './timeline';
+import { EDUCATION, EXPERIENCE } from '../data/timeline';
 
 const srcDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -28,7 +30,9 @@ export function htmlIncludes(): Plugin {
         .replace('<!--@theme-init-->', THEME_INIT_SCRIPT)
         .replace('<!--@nav-->', renderNav(navPaths))
         .replace('<!--@collection-cards-->', renderCollectionCards(COLLECTIONS))
-        .replace('<!--@project-cards-->', renderProjectCards(PROJECTS));
+        .replace('<!--@project-cards-->', renderProjectCards(PROJECTS))
+        .replace('<!--@education-->', renderTimelineEntries(EDUCATION))
+        .replace('<!--@experience-->', renderTimelineEntries(EXPERIENCE));
     },
   };
 }
