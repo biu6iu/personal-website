@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import TimelineEntry from '../components/TimelineEntry.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import SectionLink from '../components/SectionLink.astro';
-import { EDUCATION, EXPERIENCE } from '../data/timeline.ts';
+import { EDUCATION, EXPERIENCE, EXTRACURRICULARS } from '../data/timeline.ts';
 
 const base = import.meta.env.BASE_URL;
 ---
@@ -27,6 +27,11 @@ const base = import.meta.env.BASE_URL;
     <div class="mb-12">
       <SectionHeading>Experience</SectionHeading>
       {EXPERIENCE.map((entry) => <TimelineEntry entry={entry} />)}
+    </div>
+
+    <div class="mb-12">
+      <SectionHeading>Extracurriculars</SectionHeading>
+      {EXTRACURRICULARS.map((entry) => <TimelineEntry entry={entry} bulleted />)}
     </div>
 
     <div class="mb-12">

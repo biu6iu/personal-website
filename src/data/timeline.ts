@@ -81,3 +81,22 @@ export const EXPERIENCE: TimelineEntry[] = [
     lines: [{ prefix: 'Worked on', links: [{ href: 'https://hack.melbourne', text: 'hack.melbourne' }] }],
   },
 ];
+
+export const EXTRACURRICULARS: TimelineEntry[] = [
+  {
+    date: '2026',
+    title: 'Vice President of the Data Science Students Society at UniMelb',
+    lines: [{ text: 'Led a 60+ member committee across five subcommittees (education, industry, events, marketing, and HR)' },
+            {text: 'Coordinated initiatives across the society, worked closely with subcommittee leads to translate ideas into success whilst ensuring effective delegation, communication, and execution'},
+            {text: 'Oversaw the planning and delivery of diverse events including datathons, educational workshops, networking events, and social events, reaching over 500+ students'},
+    ],
+  },
+  {
+    date: '2025',
+    title: 'Events Co-ordinator at Melbourne University Racing',
+    lines: [{ text: 'Planned and coordinated a range of events including trivia nights, educational workshops, F1 watch parties, and internal committee events, managing logistics and execution from initial planning through to delivery' },
+            {text: 'Applied risk management and contingency planning to identify potential issues in advance and develop practical solutions to ensure smooth event delivery'},
+            {text: 'Liaised with external businesses to explore event opportunities and partnerships, strengthening communication and stakeholder management skills'},
+    ],
+  },
+];
