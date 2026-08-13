@@ -139,15 +139,6 @@ main:has(#collections) {
     align-items: flex-start;
 }
 
-#contact-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    max-width: 80%;
-}
-
 p {
     font-family: "Garamond", serif;
     font-size: 13px;
@@ -349,7 +340,8 @@ p a:hover {
     font-weight: 500;
 }
 
-.education-item {
+.education-item,
+.project-item {
     margin-bottom: 2rem;
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -363,7 +355,8 @@ p a:hover {
     grid-column: 1;
 }
 
-.education-info {
+.education-info,
+.project-info {
     grid-column: 2;
 }
 
@@ -390,12 +383,15 @@ p a:hover {
         grid-template-columns: 1fr;
     }
 
-    .education-item {
+    .education-item,
+    .project-item {
         grid-template-columns: 1fr;
         gap: 0.5rem;
     }
 
-    .date, .education-info {
+    .date,
+    .education-info,
+    .project-info {
         grid-column: 1;
     }
 }
@@ -439,20 +435,6 @@ main:has(#projects) {
     padding: 2rem;
 }
 
-.project-item {
-    margin-bottom: 2rem;
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 1rem;
-    align-items: baseline;
-}
-
-.project-info {
-    grid-column: 2;
-}
-
-
-
 main:has(#about-content) {
     display: block;
 }
@@ -462,14 +444,5 @@ main:has(#about-content) {
     #projects {
         padding: 1rem;
         width: 90%;
-    }
-
-    .project-item {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
-    }
-
-    .project-info {
-        grid-column: 1;
     }
 }
