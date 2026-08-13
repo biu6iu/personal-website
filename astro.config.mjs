@@ -1,5 +1,7 @@
 import { defineConfig } from 'astro/config';
 
+import tailwindcss from '@tailwindcss/vite';
+
 export default defineConfig({
   site: 'https://biu6iu.github.io',
   base: '/biu-biu/',
@@ -8,4 +10,8 @@ export default defineConfig({
   // writes elsewhere and the two can be compared side by side. Switch to the
   // default ./dist in the final phase, once Vite is removed.
   outDir: './dist-astro',
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
