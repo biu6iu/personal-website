@@ -4,9 +4,15 @@ import '../styles/global.css';
 
 interface Props {
   title: string;
+  center?: boolean;
 }
 
-const { title } = Astro.props;
+const { title, center = false } = Astro.props;
+
+const mainClass = [
+  'flex-1 overflow-y-auto h-screen max-md:h-auto max-md:min-h-0 box-border p-5',
+  center ? 'flex justify-center items-center text-center' : '',
+].join(' ');
 ---
 
 <!DOCTYPE html>
@@ -21,10 +27,10 @@ const { title } = Astro.props;
       }
     </script>
   </head>
-  <body>
-    <div class="container">
+  <body class="m-0 p-0 font-serif text-ink bg-page flex h-screen">
+    <div class="flex max-md:flex-col w-full min-h-screen max-md:h-auto overflow-hidden">
       <Nav />
-      <main>
+      <main class={mainClass}>
         <slot />
       </main>
     </div>

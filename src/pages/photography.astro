@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CollectionCard from '../components/CollectionCard.astro';
+import CollectionTitle from '../components/CollectionTitle.astro';
 import { COLLECTIONS } from '../data/collections.ts';
 ---
 
 <Layout title="Collections">
-  <section id="collections">
-    <h1 class="collection-title">PHOTOGRAPHY COLLECTIONS</h1>
+  <section class="flex flex-wrap justify-start max-md:justify-center gap-5 w-full pb-5">
+    <CollectionTitle>PHOTOGRAPHY COLLECTIONS</CollectionTitle>
     {COLLECTIONS.map((collection) => <CollectionCard collection={collection} />)}
   </section>
 </Layout>
