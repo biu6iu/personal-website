@@ -15,10 +15,24 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     date: '2026',
+    title: 'Crypto Trading Research Framework',
+    summary: 'A systematic trading research framework for cryptocurrency markets',
+    bullets: [
+      'Built several strategies including trend-following (MA crossover, time-series momentum), mean reversion (RSI), and breakout (Donchian channels) plus signal filters and hard/soft voting ensembles',
+      'Wrote a vectorised backtesting engine over a real cash ledger, applying per-trade fees and basis-point slippage, and enforces a one-bar execution delay to eliminate lookahead bias',
+      'Validated out-of-sample via walk-forward analysis, with parameter sweeps favouring robust plateaus over fragile single-point optima. Achieved an out-of-sample Sharpe of 1.19 against a buy-and-hold benchmark of 0.79',
+      "Added Monte Carlo block-bootstrap resampling to produce distributions of final return and max drawdown rather than the single historical draw, plus a noise-perturbation check measuring how much a strategy's edge depends on the exact price path",
+    ],
+    links: [
+      { label: 'Github repo:', href: 'https://github.com/biu6iu/unstable-coins', text: 'Crypto Trading Framework' },
+    ],
+  },
+  {
+    date: '2026',
     title: 'Bass Tab Generator',
     summary: 'Automatically generates bass tabs from an MP3 file.',
     bullets: [
-      'Architected a 5 stage pipeline: audio ingestion → source separation → note transcription → key/tempo/meter analysis → tab rendering',
+      'Architected a 5 stage pipeline: audio ingestion -> source separation -> note transcription -> key/tempo/meter analysis -> tab rendering',
       "Integrated pretrained deep learning models (Meta's Demucs for source separation, Spotify's Basic Pitch for pitch/onset detection) with classical MIR techniques (Constant-Q chroma features, Krumhansl-Schmuckler key finding, beat tracking) via librosa.",
     ],
     links: [
