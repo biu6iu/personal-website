@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CollectionCard from '../components/CollectionCard.astro';
+import { COLLECTIONS } from '../data/collections.ts';
+---
+
+<Layout title="Collections">
+  <section id="collections">
+    <h1 class="collection-title">PHOTOGRAPHY COLLECTIONS</h1>
+    {COLLECTIONS.map((collection) => <CollectionCard collection={collection} />)}
+  </section>
+</Layout>
