@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Gallery from '../../components/Gallery.astro';
+import { GALLERIES } from '../../data/galleries.ts';
+
+export function getStaticPaths() {
+  return GALLERIES.map((gallery) => ({
+    params: { slug: gallery.slug },
+    props: { gallery },
+  }));
+}
+
+const { gallery } = Astro.props;
+
+const pageTitle = gallery.slug
+  .split('_')
+  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+  .join(' ');
+---
+
+<Layout title={pageTitle}>
+  <div class="photo">
+    <Gallery gallery={gallery} />
+  </div>
+</Layout>
