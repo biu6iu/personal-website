@@ -1,0 +1,21 @@
+---
+import type { Project } from '../data/projects.ts';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<div class="project-item">
+  <p class="date">{project.date}</p>
+  <div class="project-info">
+    <h3>{project.title}</h3>
+    <p>{project.summary}</p>
+    {project.bullets.map((bullet) => <p> • {bullet}</p>)}
+    {project.links.map((link) => (
+      <p> • {link.label} <a href={link.href} class="section-link">{link.text}<span class="arrow">↗</span></a></p>
+    ))}
+  </div>
+</div>
