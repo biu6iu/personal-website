@@ -4,7 +4,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && cp -r src/assets/photos dist/assets/",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "astro:dev": "astro dev",
+    "astro:build": "astro build",
+    "astro:preview": "astro preview"
   },
   "devDependencies": {
     "@types/dom-navigation": "^1.0.5",
@@ -12,5 +15,8 @@
     "@types/node": "^20.11.30",
     "typescript": "^5.4.2",
     "vite": "^8.0.9"
+  },
+  "dependencies": {
+    "astro": "^7.2.1"
   }
 }

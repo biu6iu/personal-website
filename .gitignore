@@ -1,4 +1,12 @@
 /dist
+/dist-astro
+
+.astro/
+
 /node_modules
-.DS_Storesrc/assets/photos/
+
+.DS_Store
 **/.DS_Store
+
+# Photos are served from Cloudinary
+src/assets/photos/
