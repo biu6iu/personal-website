@@ -1,0 +1,19 @@
+---
+import type { Collection } from '../data/collections.ts';
+
+interface Props {
+  collection: Collection;
+}
+
+const { collection } = Astro.props;
+
+// strip the extension
+const slug = collection.path.replace(/\.html$/, '');
+const href = `${import.meta.env.BASE_URL}collections/${slug}`;
+---
+
+<a href={href}>
+  <button>
+    <img src={collection.coverImage} alt={collection.title} />
+  </button>
+</a>

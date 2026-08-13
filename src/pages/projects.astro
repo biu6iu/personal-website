@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { PROJECTS } from '../data/projects.ts';
+---
+
+<Layout title="Projects">
+  <section id="about-content">
+    <div class="about-section">
+      <h2>Projects</h2>
+      {PROJECTS.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TimelineEntry from '../components/TimelineEntry.astro';
+import { EDUCATION, EXPERIENCE } from '../data/timeline.ts';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="About me">
+  <section id="about-content">
+    <div class="about-section">
+      <h2>About</h2>
+      <p>Hi, my name is Steven!</p>
+      <p>I'm an undergrad at the University of Melbourne, studying computing and maths.</p>
+      <p>I'm interested in machine learning and enjoy building models to understand real-world data.</p>
+      <p>Outside of coding, I like to take photos, play basketball and appreciate cars.</p>
+      <p>I also enjoy watching movies and listening to all sorts of music, so go judge my <a href="https://letterboxd.com/6iubiu/">Letterboxd</a> and <a href="https://www.last.fm/user/biubiuuu">last.fm</a> if you want :D</p>
+    </div>
+
+    <div class="about-section">
+      <h2>Education</h2>
+      {EDUCATION.map((entry) => <TimelineEntry entry={entry} />)}
+    </div>
+
+    <div class="about-section">
+      <h2>Experience</h2>
+      {EXPERIENCE.map((entry) => <TimelineEntry entry={entry} />)}
+    </div>
+
+    <div class="about-section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Programming</h3>
+          <p>Python, Java, C, C++, R, SQL</p>
+        </div>
+        <div class="skill-category">
+          <h3>Tools/Frameworks</h3>
+          <p>Git, FastAPI, Pandas, NumPy, sklearn, PyTorch, MatPlotLib, Seaborn</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-section">
+      <h2>Projects</h2>
+      <p>Check out my <a href={`${base}projects`} class="section-link">projects page<span class="arrow">↗</span></a> to see what I've been working on.</p>
+    </div>
+
+    <div class="about-section">
+      <h2>Contact</h2>
+      <p>Find my contact information on the <a href={`${base}contact`} class="section-link">contact page<span class="arrow">↗</span></a>.</p>
+    </div>
+
+    <div class="about-section">
+      <p>Since you've scrolled this far, you might as well check out the <a href={`${base}photography`} class="section-link">photography page<span class="arrow">↗</span></a></p>
+    </div>
+  </section>
+</Layout>

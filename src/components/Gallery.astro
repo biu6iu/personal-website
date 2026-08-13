@@ -1,0 +1,14 @@
+---
+import type { Gallery } from '../data/galleries.ts';
+
+interface Props {
+  gallery: Gallery;
+}
+
+const { gallery } = Astro.props;
+---
+
+<h1 class="collection-title">{gallery.title}</h1>
+{gallery.images.map((image) => (
+  <img src={image.src} alt={image.alt} loading="lazy" />
+))}
