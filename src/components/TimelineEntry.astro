@@ -5,18 +5,21 @@ import SectionLink from './SectionLink.astro';
 
 interface Props {
   entry: TimelineEntry;
+  /** Prefixes each line with the same " • " marker project cards use. */
+  bulleted?: boolean;
 }
 
-const { entry } = Astro.props;
+const { entry, bulleted = false } = Astro.props;
+const marker = bulleted ? ' • ' : '';
 ---
 
 <TimelineRow date={entry.date} title={entry.title}>
   {entry.lines.map((line) =>
     'text' in line ? (
-      <p>{line.text}</p>
+      <p>{marker}{line.text}</p>
     ) : (
       <p>
-        {line.prefix}
+        {marker}{line.prefix}
         {line.links.map((link, i) => (
           <Fragment>
             {i > 0 ? ', ' : ' '}
