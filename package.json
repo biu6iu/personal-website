@@ -2,19 +2,14 @@
   "name": "personal-portfolio",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build && cp -r src/assets/photos dist/assets/",
-    "preview": "vite preview",
-    "astro:dev": "astro dev",
-    "astro:build": "astro build",
-    "astro:preview": "astro preview"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
   },
   "devDependencies": {
-    "@types/dom-navigation": "^1.0.5",
-    "@types/dom-view-transitions": "^1.0.6",
-    "@types/node": "^20.11.30",
-    "typescript": "^5.4.2",
-    "vite": "^8.0.9"
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^5.4.2"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
