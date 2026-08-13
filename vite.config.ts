@@ -13,16 +13,16 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'src/index.html',
-        photography: 'src/pages/photography.html',
-        about: 'src/pages/about.html',
-        contact: 'src/pages/contact.html',
-        projects: 'src/pages/projects.html',
-        sydney: 'src/pages/collections/sydney_collection.html',
-        chinaTrip1: 'src/pages/collections/china_trip_1.html',
-        chinaTrip2: 'src/pages/collections/china_trip_2.html',
-        fitzroy: 'src/pages/collections/fitzroy_collection.html',
-        raglan: 'src/pages/collections/raglan_collection.html',
-        archive: 'src/pages/collections/archive_collection.html'
+        photography: 'src/legacy-pages/photography.html',
+        about: 'src/legacy-pages/about.html',
+        contact: 'src/legacy-pages/contact.html',
+        projects: 'src/legacy-pages/projects.html',
+        sydney: 'src/legacy-pages/collections/sydney_collection.html',
+        chinaTrip1: 'src/legacy-pages/collections/china_trip_1.html',
+        chinaTrip2: 'src/legacy-pages/collections/china_trip_2.html',
+        fitzroy: 'src/legacy-pages/collections/fitzroy_collection.html',
+        raglan: 'src/legacy-pages/collections/raglan_collection.html',
+        archive: 'src/legacy-pages/collections/archive_collection.html'
       }
     }
   },
