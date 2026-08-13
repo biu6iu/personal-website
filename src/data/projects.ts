@@ -110,10 +110,10 @@ export const PROJECTS: Project[] = [
     title: 'This Website!',
     summary: 'A simple portfolio website',
     bullets: [
-      'Built using HTML, CSS, and TypeScript',
+      'Built with Astro and Tailwind CSS.',
     ],
     links: [
-      { label: 'Github repo:', href: 'https://github.com/biu6iu/personal-website.git', text: 'My website' },
+      { label: 'Github repo:', href: 'https://github.com/biu6iu/biu-biu', text: 'My website' },
     ],
   },
 ];
