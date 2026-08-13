@@ -8,4 +8,4 @@ Astro!
 
 I'm really proud of this website and hopefully I'll be able to add to it as I learn more and more. For now, feel free to have a look through and let me know if you have any questions or recommendations for me :D
 
-- 14/08/2026
+\- 14/08/2026
