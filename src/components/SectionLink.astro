@@ -1,0 +1,11 @@
+---
+interface Props {
+  href: string;
+  text: string;
+}
+
+const { href, text } = Astro.props;
+---
+
+{/* Text and arrow stay on one line: Astro strips whitespace around newlines. */}
+<a href={href} class="text-accent no-underline font-medium inline-flex items-center gap-1 transition-colors duration-200 ease-[ease] hover:text-accent-hover">{text}<span class="font-arrow inline-block ml-0.5 font-normal">↗</span></a>

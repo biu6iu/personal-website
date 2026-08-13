@@ -1,0 +1,29 @@
+---
+import type { TimelineEntry } from '../data/timeline.ts';
+import TimelineRow from './TimelineRow.astro';
+import SectionLink from './SectionLink.astro';
+
+interface Props {
+  entry: TimelineEntry;
+}
+
+const { entry } = Astro.props;
+---
+
+<TimelineRow date={entry.date} title={entry.title}>
+  {entry.lines.map((line) =>
+    'text' in line ? (
+      <p>{line.text}</p>
+    ) : (
+      <p>
+        {line.prefix}
+        {line.links.map((link, i) => (
+          <Fragment>
+            {i > 0 ? ', ' : ' '}
+            <SectionLink href={link.href} text={link.text} />
+          </Fragment>
+        ))}
+      </p>
+    )
+  )}
+</TimelineRow>
