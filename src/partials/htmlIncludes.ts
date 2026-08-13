@@ -15,7 +15,7 @@ import { GALLERIES } from '../data/galleries.ts';
 const srcDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 function navPathsForDepth(depth: number): NavPaths {
-  if (depth === 0) return { toRoot: '', toPages: 'pages/' };
+  if (depth === 0) return { toRoot: '', toPages: 'legacy-pages/' };
   if (depth === 1) return { toRoot: '../', toPages: '' };
   return { toRoot: '../../', toPages: '../../pages/' };
 }
