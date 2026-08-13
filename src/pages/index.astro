@@ -7,12 +7,20 @@ const SLIDE_INTERVAL = 2500;
 ---
 
 <Layout title="Home page">
-  <div id="photo-slideshow" class="slideshow" data-interval={SLIDE_INTERVAL}>
+  <div
+    id="photo-slideshow"
+    class="relative w-full h-full flex justify-center items-center overflow-hidden"
+    data-interval={SLIDE_INTERVAL}
+  >
     {COLLECTIONS.map((collection, i) => (
       <img
         src={collection.coverImage}
         alt={collection.title}
-        class={i === 0 ? 'active' : undefined}
+        class:list={[
+          'absolute max-w-[90%] max-h-[90vh] object-contain',
+          'transition-opacity duration-1000 ease-[ease-in-out]',
+          i === 0 ? 'opacity-100' : 'opacity-0',
+        ]}
       />
     ))}
   </div>
@@ -28,9 +36,9 @@ const SLIDE_INTERVAL = 2500;
 
     if (images.length > 1) {
       setInterval(() => {
-        images[current].classList.remove('active');
+        images[current].classList.replace('opacity-100', 'opacity-0');
         current = (current + 1) % images.length;
-        images[current].classList.add('active');
+        images[current].classList.replace('opacity-0', 'opacity-100');
       }, interval);
     }
   }

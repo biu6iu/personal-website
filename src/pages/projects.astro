@@ -1,13 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import SectionHeading from '../components/SectionHeading.astro';
 import { PROJECTS } from '../data/projects.ts';
 ---
 
 <Layout title="Projects">
-  <section id="about-content">
-    <div class="about-section">
-      <h2>Projects</h2>
+  <section class="max-w-[800px] mx-auto p-8 box-border">
+    <div class="mb-12">
+      <SectionHeading>Projects</SectionHeading>
       {PROJECTS.map((project) => <ProjectCard project={project} />)}
     </div>
   </section>

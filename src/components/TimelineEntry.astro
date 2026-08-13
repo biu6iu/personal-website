@@ -1,5 +1,7 @@
 ---
 import type { TimelineEntry } from '../data/timeline.ts';
+import TimelineRow from './TimelineRow.astro';
+import SectionLink from './SectionLink.astro';
 
 interface Props {
   entry: TimelineEntry;
@@ -8,24 +10,20 @@ interface Props {
 const { entry } = Astro.props;
 ---
 
-<div class="education-item">
-  <p class="date">{entry.date}</p>
-  <div class="education-info">
-    <h3>{entry.title}</h3>
-    {entry.lines.map((line) =>
-      'text' in line ? (
-        <p>{line.text}</p>
-      ) : (
-        <p>
-          {line.prefix}
-          {line.links.map((link, i) => (
-            <Fragment>
-              {i > 0 ? ', ' : ' '}
-              <a href={link.href} class="section-link">{link.text}<span class="arrow">↗</span></a>
-            </Fragment>
-          ))}
-        </p>
-      )
-    )}
-  </div>
-</div>
+<TimelineRow date={entry.date} title={entry.title}>
+  {entry.lines.map((line) =>
+    'text' in line ? (
+      <p>{line.text}</p>
+    ) : (
+      <p>
+        {line.prefix}
+        {line.links.map((link, i) => (
+          <Fragment>
+            {i > 0 ? ', ' : ' '}
+            <SectionLink href={link.href} text={link.text} />
+          </Fragment>
+        ))}
+      </p>
+    )
+  )}
+</TimelineRow>
