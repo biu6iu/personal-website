@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
       "Added Monte Carlo block-bootstrap resampling to produce distributions of final return and max drawdown rather than the single historical draw, plus a noise-perturbation check measuring how much a strategy's edge depends on the exact price path",
     ],
     links: [
-      { label: 'Github repo:', href: 'https://github.com/biu6iu/unstable-coins', text: 'Crypto Trading Framework' },
+      { label: 'Github repo:', href: 'https://github.com/biu6iu/unstable-coins', text: 'Crypto Trading Framework Repo' },
     ],
   },
   {
@@ -49,7 +49,7 @@ export const PROJECTS: Project[] = [
       'Implemented a hybrid Naive Bayes classifier supporting both categorical features (Laplace smoothing) and continuous features (Gaussian likelihood estimation).',
     ],
     links: [
-      { label: 'Github repo:', href: 'https://github.com/biu6iu/naive-bayes-classifier', text: 'Naive Bayes Classifier' },
+      { label: 'Github repo:', href: 'https://github.com/biu6iu/naive-bayes-classifier', text: 'Naive Bayes Classifier Repo' },
     ],
   },
   {
@@ -63,7 +63,7 @@ export const PROJECTS: Project[] = [
       'Evaluated against baseline using accuracy, log loss, Brier score, ROC-AUC, and calibration curves',
     ],
     links: [
-      { label: 'Github repo:', href: '', text: 'NBA Win Predictor' },
+      { label: 'Github repo:', href: '', text: 'NBA Win Predictor Repo' },
     ],
   },
   {
@@ -74,7 +74,7 @@ export const PROJECTS: Project[] = [
       'Fetches summoner data, recent match IDs, and detailed per-match statistics including champion played, KDA, and win/loss outcomes',
     ],
     links: [
-      { label: 'Github repo:', href: 'https://github.com/biu6iu/biubiu_bot', text: 'LoL Discord Bot' },
+      { label: 'Github repo:', href: 'https://github.com/biu6iu/biubiu_bot', text: 'LoL Discord Bot Repo' },
     ],
   },
   {
@@ -88,13 +88,13 @@ export const PROJECTS: Project[] = [
     ],
     links: [
       { label: 'Link:', href: 'https://onlychats2025.vercel.app/', text: 'OnlyChats webpage' },
-      { label: 'Github repo:', href: 'https://github.com/biu6iu/OnlyChats_v2.git', text: 'OnlyChats Repo' },
+      { label: 'Github repo:', href: 'https://github.com/biu6iu/OnlyChats_v2.git', text: 'Prompt-based Chatroom App Repo' },
     ],
   },
   {
     date: '2025',
-    title: 'AI-powered Driver Assistant',
-    summary: 'An AI-powered driver assistant that provides real-time feedback and suggestions',
+    title: 'AI Driver Assistant',
+    summary: 'An AI driver assistant that provides real-time feedback and suggestions',
     bullets: [
       'Aimed to lower driver fatigue and help drivers stay focused whilst driving',
       'Built mainly with Langchain and OpenCV for focus detection',
@@ -102,7 +102,7 @@ export const PROJECTS: Project[] = [
       'Project for Unihack 2025',
     ],
     links: [
-      { label: 'Github repo:', href: 'https://github.com/gzchenny/eepy', text: 'Eepy Repo' },
+      { label: 'Github repo:', href: 'https://github.com/combosm/eepy', text: 'AI Driver Assistant Repo' },
     ],
   },
   {
