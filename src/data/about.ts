@@ -86,7 +86,7 @@ export const EXTRACURRICULARS: TimelineEntry[] = [
   {
     date: '2026',
     title: 'Vice President of the Data Science Students Society at UniMelb',
-    lines: [{ text: 'Led a 60+ member committee across five subcommittees (education, industry, events, marketing, and HR)' },
+    lines: [{text: 'Led a 60+ member committee across five subcommittees (education, industry, events, marketing, and HR)' },
             {text: 'Coordinated initiatives across the society, worked closely with subcommittee leads to translate ideas into success whilst ensuring effective delegation, communication, and execution'},
             {text: 'Oversaw the planning and delivery of diverse events including datathons, educational workshops, networking events, and social events, reaching over 500+ students'},
     ],
@@ -94,9 +94,17 @@ export const EXTRACURRICULARS: TimelineEntry[] = [
   {
     date: '2025',
     title: 'Events Co-ordinator at Melbourne University Racing',
-    lines: [{ text: 'Planned and coordinated a range of events including trivia nights, educational workshops, F1 watch parties, and internal committee events, managing logistics and execution from initial planning through to delivery' },
+    lines: [{text: 'Planned and coordinated a range of events including trivia nights, educational workshops, F1 watch parties, and internal committee events, managing logistics and execution from initial planning through to delivery' },
             {text: 'Applied risk management and contingency planning to identify potential issues in advance and develop practical solutions to ensure smooth event delivery'},
             {text: 'Liaised with external businesses to explore event opportunities and partnerships, strengthening communication and stakeholder management skills'},
     ],
   },
+  {
+    date: '2024',
+    title: 'Media Director at HackMelbourne',
+    lines: [{text: 'Led a team of 4 in handling media related tasks for HackMelbourne, including photographing and filming events, creating marketing material, and posting short form videos'},
+            {text: 'Garnered over 15 million cummulative views during my time as media director, with the top video hitting 12 million views'},
+            {text: 'Grew the Instagram account from 700 followers to 5000+ followers over the span of 1 year'}
+    ],
+  }
 ];
