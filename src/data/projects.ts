@@ -29,14 +29,27 @@ export const PROJECTS: Project[] = [
   },
   {
     date: '2026',
+    title: 'Automated Plant Watering Device',
+    summary: 'A device that automatically waters a plant based on environmental factors',
+    bullets: [
+      'Built using an ESP32 microcontroller, with multiple sensors (temperature, humidity, soil moisture, light) constantly feeding input, which is displayed on a small screen',
+      'Designed a customised water pumping system to automatically pump water when the calibrated soil moisture level drops below a threshold. The algorithm is based on existing studies on automated watering devices',
+      'Project was built as part of CISSA\'s Hardwired hackathon with a team of 4'
+    ],
+    links: [
+      { label: 'Github repo:', href: 'https://github.com/sungchung-ds/plant-alive', text: 'Watering Device Repo' },
+    ],
+  },
+  {
+    date: '2026',
     title: 'Bass Tab Generator',
-    summary: 'Automatically generates bass tabs from an MP3 file.',
+    summary: 'Automatically generates bass tabs from an MP3 file',
     bullets: [
       'Architected a 5 stage pipeline: audio ingestion -> source separation -> note transcription -> key/tempo/meter analysis -> tab rendering',
       "Integrated pretrained deep learning models (Meta's Demucs for source separation, Spotify's Basic Pitch for pitch/onset detection) with classical MIR techniques (Constant-Q chroma features, Krumhansl-Schmuckler key finding, beat tracking) via librosa.",
     ],
     links: [
-      { label: 'Github repo:', href: 'https://github.com/biu6iu/bass-tab-generator', text: 'Bass tab generator' },
+      { label: 'Github repo:', href: 'https://github.com/biu6iu/bass-tab-generator', text: 'Bass tab generator Repo' },
     ],
   },
   {
