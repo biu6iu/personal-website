@@ -1,5 +1,4 @@
 ---
-import SectionHeading from './SectionHeading.astro';
 import SectionLink from './SectionLink.astro';
 
 interface Props {
@@ -36,29 +35,67 @@ try {
 } catch (err) {
   console.error(`[GithubActivity] failed to fetch contributions at build time:`, err);
 }
+
+const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+const totalCols = Math.ceil(cells.length / 7);
+const monthLabels: (string | null)[] = [];
+let lastMonth = '';
+for (let col = 0; col < totalCols; col++) {
+  let label: string | null = null;
+  for (let row = 0; row < 7; row++) {
+    const c = cells[col * 7 + row];
+    if (c) {
+      const month = c.date.slice(0, 7);
+      if (month !== lastMonth) {
+        label = MONTH_NAMES[Number(c.date.slice(5, 7)) - 1];
+        lastMonth = month;
+      }
+      break;
+    }
+  }
+  monthLabels.push(label);
+}
 ---
 
-<div class="mb-12">
-  <SectionHeading>GitHub Activity</SectionHeading>
+<div class="mb-8">
   {cells.length > 0 ? (
-    <div
-      role="img"
-      aria-label={`GitHub contribution activity for ${username}`}
-      class="overflow-x-auto"
-    >
-      <div class="grid grid-flow-col grid-rows-7 gap-1 w-max">
-        {cells.map((c) =>
-          c ? (
-            <div
-              class={`w-2.5 h-2.5 rounded-sm ${LEVEL_CLASSES[c.level]}`}
-              title={`${c.count} contribution${c.count === 1 ? '' : 's'} on ${c.date}`}
-            />
-          ) : (
-            <div class="w-2.5 h-2.5 rounded-sm opacity-0" />
-          )
-        )}
+    <>
+      <div
+        role="img"
+        aria-label={`GitHub contribution activity for ${username}`}
+        class="overflow-x-auto"
+      >
+        <div
+          class="grid gap-0.5 w-max"
+          style={`grid-template-rows: auto repeat(7, 10px); grid-template-columns: repeat(${totalCols}, 10px);`}
+        >
+          {monthLabels.map((label, col) =>
+            label ? (
+              <span
+                class="text-ink-muted text-[10px] leading-none whitespace-nowrap"
+                style={`grid-column: ${col + 1}; grid-row: 1;`}
+              >
+                {label}
+              </span>
+            ) : null
+          )}
+          {cells.map((c, i) => {
+            const col = Math.floor(i / 7) + 1;
+            const row = (i % 7) + 2;
+            return c ? (
+              <div
+                class={`w-2.5 h-2.5 rounded-sm ${LEVEL_CLASSES[c.level]}`}
+                style={`grid-column: ${col}; grid-row: ${row};`}
+                title={`${c.count} contribution${c.count === 1 ? '' : 's'} on ${c.date}`}
+              />
+            ) : (
+              <div class="w-2.5 h-2.5 rounded-sm opacity-0" style={`grid-column: ${col}; grid-row: ${row};`} />
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </>
   ) : (
     <p class="text-ink-muted text-sm">
       Couldn't load GitHub activity — see it directly on <SectionLink href={`https://github.com/${username}`} text="GitHub" />.
